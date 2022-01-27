@@ -1,0 +1,863 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 100%;
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==== GLOBAL STYLING ==== */
+menu,
+ol,
+ul {
+    padding: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    width: 80rem; /* 1280px */
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* ==== HEADER ==== */
+
+.logo{
+    padding-left: 3.75rem;
+}
+
+header{
+    width: 100%;
+    height: 790px;
+    background: blue url(../img/hiker-banner.jpg) no-repeat center center;
+}
+
+header a{
+    display: block;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.main-nav{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.menu{
+    display: flex;
+    margin-right: 1rem;
+}
+
+.menu ul{
+    text-decoration: none;
+}
+
+.menu li{
+    padding: 0.5rem 2rem;
+    font-size: 1.125rem;
+}
+
+.menu li:hover{
+    background-color: #0c2f62;
+    color: #fff;
+}
+
+.menu li:active{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.current-link{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 0.5rem
+}
+
+/* ==== MEGA MENU ==== */
+.columns {
+  padding: 0.5rem 3rem;
+  background-color: #fff;
+}
+
+.mega-menu-nav{
+    width: 100%;
+    background-color: #0c2f62;
+}
+
+.mega-menu-content{
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  top: 18.75%;
+  left: 50%;
+  margin-left: -38.75rem;
+  background-color: white;
+}
+
+.mega-menu-content li{
+    white-space: nowrap;
+}
+
+.mega-menu-content li a{
+    color: #254a7e;
+    line-height: 1.69rem;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.mega-menu-nav a,
+.menu a{
+    color: #fff;
+    font-weight: bold;
+}
+
+.mega-menu-nav a{
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.mega-menu-nav a:hover{
+    background-color: #fff;
+    color: #254a7e;
+    text-decoration: underline;
+}
+
+.mega-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown:hover .mega-menu-content{
+  display: flex;
+  visibility: visible;
+}
+
+.mega-nav-header{
+    font-weight: bold;
+}
+
+.menu-section{
+    margin-bottom: 2rem;
+}
+
+.columns li a{
+    padding: 0;
+}
+
+/* ==== HEADER TEXT ==== */
+
+header h1,
+header h3{
+    text-align: center;
+    color: #fff;
+}
+
+header h1{
+    font-size: 3.75rem;
+    font-weight: bold;
+    margin-top: 7.8rem;
+}
+
+header h3{
+    font-weight: normal;
+    font-size: 1.25rem;
+    margin: 0 23.44rem;
+}
+
+/* ==== MAIN ==== */
+
+.style-selector,
+.checkout-bar{
+    justify-content: space-between;
+    background-color: #f5f6f7;
+    padding: 2rem 6rem;
+}
+
+.style-checkbox{
+    justify-content: space-between;
+}
+
+.style-selector label{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.style-checkbox div{
+    padding: 1rem;
+}
+
+.style-checkbox input[type=checkbox]{
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 0.25rem;
+}
+
+.btn{
+    text-align: center;
+    width: 12.75rem;
+    padding: 1rem;
+    display: inline-block;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #0c2f62;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.btn:hover{
+    background-color: #ddd;
+    color: #0c2f62;
+    text-decoration: underline;
+}
+
+.checkout-bar h3{
+    font-weight: normal;
+    color: #0c2f62;
+    text-transform: uppercase;
+}
+
+/* ==== PRODUCTS ==== */
+
+.products-section{
+    padding: 4rem 6rem;
+}
+
+.product-cards{
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+}
+
+.section-header{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #0c2f62;
+}
+
+.mens-products hr,
+.womens-products hr{
+    height: 2px;
+    border-top: 2px solid #0c2f62;
+    margin: 1em 0.94rem;
+}
+
+.mens-products hr{
+    width: 60rem;
+    padding-left: 0.94rem;
+}
+
+.womens-products hr{
+    width: 59.5rem;
+    margin: 0;
+}
+
+.womens-header h3{
+    margin-left: 0.5rem;
+}
+
+.section-page-num{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #0c2f62;
+}
+
+.page-num{
+    margin: 0;
+}
+
+.page-arrows{
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.product-items{
+    width: 100%;
+    justify-content: space-between
+}
+
+.product:hover{
+    border: 5px solid #0c2f62;
+    border-radius: 3px;
+}
+
+.womens-products .section-page-num{
+    align-items: flex-start;
+}
+
+/* ==== ABOUT US ==== */
+.about-us{
+    width: 100%;
+    background-color: #0c2f62;
+    color: #fff;
+    text-align: center;
+    padding: 4.375rem 17.5rem;
+}
+
+.about-us fieldset{
+    border: 1px solid #fff;
+    padding: 5rem 5.625rem;
+    border-radius: 0.125rem;
+}
+
+.about-us legend{
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+
+
+/* ==== CHECKOUT FORMS ==== */
+.cart-page{
+    width: 85%;
+    margin: 3.5rem auto;
+}
+
+.cart-page hr{
+    margin-bottom: 1rem;
+}
+
+.cart-page label{
+    display: block;
+    margin-bottom: 0.125rem;
+    margin-top: 0.25rem;
+}
+
+.cart-page input[type=text],
+.cart-page input[type=tel]{
+    padding: 0.25rem;
+}
+
+.cart-forms{
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.cart-forms fieldset{
+    width: 45%;
+    flex-direction: column;
+}
+
+.cart-forms h3{
+    background-color: #6a91ca;
+    font-weight: bold;
+    color: #0c2f62;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.returning-cust,
+.cart-forms label{
+    font-size: 0.875rem;
+}
+
+.login-form label{
+    font-weight: bold;
+    color: #0c2f62;
+}
+
+.login-btn,
+.coupon-btn{
+    width: 6.4375rem;
+}
+
+.login-form{
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.login-form input[type=text]{
+    width: 20rem;
+}
+
+.coupon-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.coupon-btn{
+    align-self: flex-end;
+}
+
+.coupon-form label{
+    margin-top: 0.875rem;
+}
+
+.coupon-form input[type=text]{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.address-forms{
+    justify-content: space-between;
+}
+
+.billing-address,
+.shipping-address{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.billing-address label,
+.shipping-address label{
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #0c2f62;
+}
+
+.billing-address div,
+.shipping-address div{
+    margin-bottom: 0.5rem;
+}
+
+.billing-address input[type=text],
+.billing-address input[type=tel],
+.shipping-address input[type=text],
+.shipping-address input[type=tel]{
+    width: 14rem;
+}
+
+.billing-address h3,
+.shipping-address h3{
+    width: 100%;
+    font-weight: bold;
+    color: #0c2f62;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.x-long input[type=text]{
+    width: 30.7rem;
+}
+
+.account-check{
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
+.account-check input{
+    margin-right: 0.5rem;
+}
+
+/* ==== TABLE ==== */
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+table th{
+    text-align: left;
+}
+
+table .cart-btn{
+    text-align: right;
+}
+
+table td{
+    border-bottom: 1px solid #ddd;
+}
+
+table td:nth-child(2){
+    text-align: right;
+}
+
+table .total-amt{
+    border-bottom: none;
+    color: #3bb18f;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+th, td{
+    padding: 0.5rem 0rem;
+    color: #0c2f62;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+/* ==== PAYMENT TYPES ==== */
+
+.payment-type{
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 2rem;
+}
+
+.payment-type label{
+    display: inline-block;
+    font-weight: bold;
+    color: #0c2f62;
+    margin-left: 0.375rem;
+}
+
+.payment-type p{
+    margin-left: 1.5rem;
+}
+
+.buttons{
+    margin-top: 1rem;
+}
+
+.buttons input[type=submit]{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #3bb18f;
+    font-weight: bold;
+    color: #fff;
+}
+
+.buttons input[type=submit]:hover{
+    background-color: #424242;
+    color: #3bb18f;
+}
+
+input:invalid{
+    color: red;
+    font-weight: bold;
+}
+
+::placeholder{
+    font-weight: normal;
+    color: #aaa;
+}
+
+/* ==== FOOTER ==== */
+footer{
+    width: 100%;
+    background-color: #424242;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4.0625rem;
+}
+
+.company-info{
+    width: 25%;
+    text-transform: uppercase;
+}
+
+.company-info h3{
+    font-size: 1.25rem;
+}
+
+.company-info p{
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+}
+
+.footer-links{
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-links li,
+.footer-links a{
+    color: #fff;
+}
+
+.footer-links li{
+    padding: 0.25rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.footer-links ul{
+    margin: 0;
+}
+
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
